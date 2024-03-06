@@ -10,7 +10,7 @@ body{
 }
 
 main{
-  max-width: 300px;
+  max-width: 320px;
   margin: 20px auto;
 }
 
@@ -20,6 +20,8 @@ form {
   padding-left: 5px;
   display: flex;
   height: 40px;
+  margin: 10px 30px 2px 30px;
+
 }
 
 form input[type="text"]{
@@ -57,4 +59,17 @@ div.todo{
   display: flex;
   margin-left: auto;
   border: none;
+}
+
+h1{
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome{
+  height: 200px;
+  width: 350px;
+  background-color: rgb(173, 124, 119);
+  border-radius: 4px;
 }

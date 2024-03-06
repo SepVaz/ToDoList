@@ -1,35 +1,22 @@
 
-import React, {useState} from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import TodoInput from './components/TodoInput'
-import Todo from './components/Todo'
+import WelcomePage from '../WelcomePage'
+import TodoPage from './components/TodoPage'
+
 
 function App() {
-  const [todos, setTodos] = useState([])
-
-  const addTodo = (name) => {
-    setTodos((prev) => [...prev, {id: Math.floor(Math.random() * 1000), name }]);
-  };
-
-
-  const handleRemove = (index) => {
-    setTodos((prev) => prev.filter((_, i) => i !== index)) 
-  };
+  return (
+  <BrowserRouter>
+  <>
+  <Routes>
+    <Route exact path="/" element={<WelcomePage/>}/>
+    <Route exact path="/todo" element={<TodoPage/>}/>
+  </Routes>
+  </>
+  </BrowserRouter>
  
-  return (<>
-
-      <main>
-        <TodoInput onSubmit={addTodo}></TodoInput>
-        {todos.map((todo, index) => (
-          <Todo 
-          key={todo.id} 
-          name={todo.name} 
-          onRemove={() => handleRemove(index)} />
-        ))}
-
-      </main>
-     
-    </>)
+    )
 }
 
 export default App
