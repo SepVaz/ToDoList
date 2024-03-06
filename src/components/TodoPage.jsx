@@ -24,6 +24,7 @@ const {name} = location.state
     
     
         <main>
+            <div className="welcome"> 
         <h1>Welcome, {name}!</h1>
 
         <TodoInput onSubmit={addTodo}></TodoInput>
@@ -33,6 +34,7 @@ const {name} = location.state
           name={todo.name} 
           onRemove={() => handleRemove(index)} />
         ))}
+        </div>
 
       </main>
   

@@ -6,10 +6,20 @@ function WelcomePage() {
     const navigate = useNavigate();
 
 
-    const handleLogin = () => {
-        navigate("/todo", {state: {name}})
-    };
+    const capitalizeFirstLetter = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      };
 
+      const handleInputChange = (e) => {
+        const inputValue = e.target.value;
+        const capitalizedInput = capitalizeFirstLetter(inputValue);
+        setName(capitalizedInput);
+    }
+    
+      const handleLogin = () => {
+        const capitalizedName = capitalizeFirstLetter(name);
+        navigate('/todo', { state: { name: capitalizedName } });
+      }
 
   return (
     <main>
@@ -19,7 +29,7 @@ function WelcomePage() {
         <input type="text"
         placeholder="Enter your name"
         value={name} 
-        onChange={(e) => setName(e.target.value)}
+        onChange={handleInputChange}
         />
 
         <button onClick={handleLogin}>Login</button>

@@ -20,8 +20,6 @@ form {
   padding-left: 5px;
   display: flex;
   height: 40px;
-  margin: 10px 30px 2px 30px;
-
 }
 
 form input[type="text"]{
@@ -67,9 +65,3 @@ h1{
   justify-content: center;
 }
 
-.welcome{
-  height: 200px;
-  width: 350px;
-  background-color: rgb(173, 124, 119);
-  border-radius: 4px;
-}
