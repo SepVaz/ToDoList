@@ -7,6 +7,12 @@ const capitalizeFirstLetter = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    const capitalizedInput = capitalizeFirstLetter(inputValue);
+    setTodoName(capitalizedInput);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const capitalizedTodo = capitalizeFirstLetter(todoName);
@@ -20,7 +26,7 @@ const capitalizeFirstLetter = (str) => {
           <input type="text" 
           placeholder="Add something"
           value={todoName}
-          onChange={e => setTodoName(e.target.value)} required/>
+          onChange={handleInputChange} required/>
 
           <button type="submit">+</button>
 
