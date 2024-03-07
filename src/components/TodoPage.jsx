@@ -15,8 +15,8 @@ const {name} = location.state
   };
 
 
-  const handleRemove = (index) => {
-    setTodos((prev) => prev.filter((_, i) => i !== index)) 
+  const handleRemove = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id)) 
   };
 
 
@@ -28,11 +28,12 @@ const {name} = location.state
         <h1>Welcome, {name}!</h1>
 
         <TodoInput onSubmit={addTodo}></TodoInput>
-        {todos.map((todo, index) => (
+        {todos.map((todo) => (
           <Todo 
           key={todo.id} 
+          id={todo.id}
           name={todo.name} 
-          onRemove={() => handleRemove(index)} />
+          onRemove={() => handleRemove(todo.id)} />
         ))}
         </div>
 

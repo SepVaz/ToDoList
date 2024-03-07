@@ -1,8 +1,10 @@
 body{
   margin: 0;
   padding:0 ;
-  background-color: rgb(207, 173, 153);
-  color:aliceblue
+  background-color:  #e16b6b;
+  color:black;
+  font-size: medium;
+  font-family: "Noto Serif", serif;
 }
 
 *{
@@ -10,20 +12,26 @@ body{
 }
 
 main{
-  max-width: 320px;
+  max-width: 350px;
   margin: 20px auto;
+  background-color:#60c0bf ;
+  border-radius: 5px;
+  padding: 0 15px 15px ;
+  
 }
 
 form {
-  border: 3px solid #e6d1d0;
+  
+  border: 2px solid #000000;
   border-radius: 10px;
   padding-left: 5px;
   display: flex;
   height: 40px;
+  background-color: #f6c96b;
 }
 
 form input[type="text"]{
-  background-color: inherit;
+  background-color: #f6c96b;
   border: 0;
   padding: 0 8px;
   display: block;
@@ -41,14 +49,37 @@ form button{
 }
 
 div.todo{
-  background-color: rgb(207, 172, 169);
+  background-color: #b381d9;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 5px;
+  padding-left: 15px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  height: 40px; 
+  line-height: 30px;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+div.tododone{
+  opacity: 0.5;
+  background-color: #b381d9;
   border-radius: 10px;
   border: 1px solid rgb(250, 207, 207);
   padding: 5px;
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
+  height: 40px; 
+  line-height: 30px;
+  text-decoration: line-through;
+  transition: width .5s linear;
 }
 
 
@@ -64,4 +95,6 @@ h1{
   display: flex;
   justify-content: center;
 }
+
+
 

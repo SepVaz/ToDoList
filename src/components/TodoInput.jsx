@@ -23,10 +23,11 @@ const capitalizeFirstLetter = (str) => {
   return (
     <div className="welcome">
       
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <input 
           type="text" 
-          placeholder="Add something"
+          placeholder="What needs to be done?"
+          id="form"
           value={todoName}
           onChange={handleInputChange} 
           required/>

@@ -22,10 +22,11 @@ function WelcomePage() {
       }
 
   return (
+    
     <main>
         <div className="welcome">
         <h1>Welcome!</h1>
-        <form action="">
+        <form>
         <input type="text"
         placeholder="Enter your name"
         value={name} 
@@ -34,8 +35,9 @@ function WelcomePage() {
 
         <button onClick={handleLogin}>Login</button>
         </form>
-        </div>
+        </div> 
     </main>
+    
   )
 }
 
