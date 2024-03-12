@@ -9,11 +9,11 @@ const handleToggleDone = () => {
 }
 
   return (
-    <div className={"todo" + (done ? "done" : "")} >
+    <div className={"todo" + (done ? " done" : "")} >
     
     <span onClick={handleToggleDone}>{name}</span> 
 
-      <button className="remove-btn" onClick={onRemove}>
+      <button className="remove-btn" onClick={ () => onRemove()}>
         <img src={binImage}  alt="Remove" width="10" height="15" /></button>
     </div>
     

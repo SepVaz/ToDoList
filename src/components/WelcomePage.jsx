@@ -17,6 +17,7 @@ function WelcomePage() {
     }
     
       const handleLogin = () => {
+        e.preventDefault();
         const capitalizedName = capitalizeFirstLetter(name);
         navigate('/todo', { state: { name: capitalizedName } });
       }
@@ -31,9 +32,10 @@ function WelcomePage() {
         placeholder="Enter your name"
         value={name} 
         onChange={handleInputChange}
+        required
         />
 
-        <button onClick={handleLogin}>Login</button>
+        <button onClick={handleLogin} className="login-btn">Login</button>
         </form>
         </div> 
     </main>

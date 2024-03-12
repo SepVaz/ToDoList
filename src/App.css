@@ -12,16 +12,15 @@ body{
 }
 
 main{
-  max-width: 350px;
+  max-width: 400px;
   margin: 20px auto;
   background-color:#60c0bf ;
   border-radius: 5px;
   padding: 0 15px 15px ;
-  
 }
 
+
 form {
-  
   border: 2px solid #000000;
   border-radius: 10px;
   padding-left: 5px;
@@ -37,15 +36,30 @@ form input[type="text"]{
   display: block;
   width: 100%;
   outline: none;
+  font-size: 16px;
+  font-family: "noto serif";
 }
 
 form button{
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(122, 209, 129);
   border: 0;
   border-radius: 6px;
   cursor: pointer;
-  margin: 5px;
-  
+  margin: 5px; 
+}
+
+form button:active{
+  box-shadow: 3px 3px 6px #682f5b;
+  border-radius: 4px;
+}
+
+.login-btn{
+  font-weight: 700;
+}
+
+.add-btn {
+  width: 40px;
+  font-weight: bold;
 }
 
 div.todo{
@@ -60,6 +74,7 @@ div.todo{
   align-items: center; 
   height: 40px; 
   line-height: 30px;
+  cursor: pointer;
 }
 
 .done span {
@@ -82,12 +97,17 @@ div.tododone{
   transition: width .5s linear;
 }
 
-
 .remove-btn{
-  background-color: inherit;
+  background-color: rgb(250, 108, 108);
+  border-radius: 5px;
   display: flex;
   margin-left: auto;
   border: none;
+}
+
+.remove-btn:active {
+  box-shadow: 3px 3px 6px #291e26;
+  border-radius: 4px;
 }
 
 h1{
@@ -96,5 +116,10 @@ h1{
   justify-content: center;
 }
 
+form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f6c96b inset;
+}
 
-
+form input:-moz-autofill {
+  box-shadow: 0 0 0px 1000px #f6c96b inset;
+}

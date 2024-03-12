@@ -32,7 +32,7 @@ const capitalizeFirstLetter = (str) => {
           onChange={handleInputChange} 
           required/>
 
-          <button type="submit">+</button>
+          <button type="submit" className="add-btn">+</button>
 
         </form>
     </div>
