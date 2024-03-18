@@ -16,7 +16,7 @@ function WelcomePage() {
         setName(capitalizedInput);
     }
     
-      const handleLogin = () => {
+      const handleLogin = (e) => {
         e.preventDefault();
         const capitalizedName = capitalizeFirstLetter(name);
         navigate('/todo', { state: { name: capitalizedName } });
